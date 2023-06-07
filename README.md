@@ -34,3 +34,10 @@ drop database hermes;
 ```
 sudo -u postgres createdb hermes
 ```
+
+## Scripts Pandas com integração SQL
+
+```
+# Select table names
+pandas.read_sql("""SELECT table_name  FROM information_schema.tables WHERE table_schema = 'public' """, connection)
+```
